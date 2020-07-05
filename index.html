@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Running of the Jaynes Race Bibs</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="N.E.Lilly">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <style>
+    html { background-color: #ffffe4; padding: 0; margin: 0; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-font-smoothing: antialiased; font-family: Anton, sans-serif; font-size: 18px; font-weight: 400; }
+    body {
+      font-family: Anton, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .userNumber {
+      margin: 0 auto;
+      max-width: 480px;
+    }
+    .bib {
+      margin: 0 auto;
+      max-width: 770px;
+    }
+    h1, h2 {
+      font-weight: normal;
+    }
+    figure {
+      margin: 0 auto;
+    }
+    p {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    aside {
+      float: right;
+    }
+    input {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+    button {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+
+    #c {
+      /* border: 1px dashed #999; */
+      height: 8in;
+      width: 8in;
+    }
+  </style>
+</head>
+
+<body>
+<header class="site__header">
+</header>
+<main id="main" class="main">
+  <article class="userNumber">
+    <h1>Running of the Jaynes</h1>
+    <p>Choose your bib below and right click on the bib to save it. Or print directly from the browser window on a letter-size sheet of paper.</p>
+    <p>Visit the <a href="http://pabrowncoats.com/csts/running-of-the-jaynes/">Pennsylvania Browncoats: Running of the Jaynes page</a> for registration information or to contact the race organizers.</p>
+
+    <hr />
+    <h2>Participants:</h2>
+    <ul id="runners">
+
+    </ul>
+    <hr />
+
+    <figure>
+    <img src="rotj-bib000_sm.png" height="480" width="480" alt="Running of the Jaynes. Can't Stop the Serenity 2020 Virtual 5k. 0000. Your Name" />
+    <figcaption>Race Bib</figcaption>
+    </figure>
+    <!-- <hr />
+    <form action="">
+      <label>Number</label>
+      <input name="id" type="text" required />
+      <button type="submit">Submit</button>
+    </form> -->
+  </article>
+  <article class="bib" hidden>
+    <canvas id="c"></canvas>
+  </article>
+</main>
+<footer class="site__footer">.
+</footer>
+
+<script>
+  (function() {
+
+    const bibs = [
+      {
+        "id": 1,
+        "runOption": "run",
+        "First name": "Helen",
+        "Last name": "Eshleman",
+        "bibName": "Tequila Bandit"
+      },
+      {
+        "id": 2112,
+        "runOption": "run",
+        "First name": "Jim",
+        "Last name": "Eshleman",
+        "bibName": "Slippery Jim"
+      },
+      {
+        "id": 3,
+        "runOption": "run",
+        "First name": "Nathan",
+        "Last name": "Lilly",
+        "bibName": "Nathan E. Lilly"
+      },
+      {
+        "id": 4,
+        "runOption": "run",
+        "First name": "James",
+        "Last name": "Sunga",
+        "bibName": "JW"
+      },
+      {
+        "id": 5,
+        "runOption": "run",
+        "First name": "Marielaina",
+        "Last name": "Forcey",
+        "bibName": "Laina"
+      },
+      {
+        "id": 6,
+        "runOption": "run",
+        "First name": "Regina",
+        "Last name": "Barry",
+        "bibName": "Regina"
+      },
+      {
+        "id": 7,
+        "runOption": "run",
+        "First name": "Tanya",
+        "Last name": "Dapkey",
+        "bibName": "Raffle Mistress"
+      },
+      {
+        "id": 42,
+        "runOption": "run",
+        "First name": "Sophiny",
+        "Last name": "Lilly",
+        "bibName": "YoSophBridge"
+      },
+      {
+        "id": 9,
+        "runOption": "run",
+        "First name": "Geoff",
+        "Last name": "Weyer",
+        "bibName": "Geoff"
+      },
+      {
+        "id": 10,
+        "runOption": "run",
+        "First name": "Leslie",
+        "Last name": "Maynard",
+        "bibName": "Mudder #1"
+      },
+      {
+        "id": 11,
+        "runOption": "run",
+        "First name": "Richard",
+        "Last name": "Maynard",
+        "bibName": "Mudder #2"
+      },
+      {
+        "id": 12,
+        "runOption": "run",
+        "First name": "Kevin",
+        "Last name": "Maynard",
+        "bibName": "Kevin"
+      },
+      {
+        "id": 13,
+        "runOption": "run",
+        "First name": "Kristi",
+        "Last name": "Clements",
+        "bibName": "Cap'n Tight Pants"
+      },
+      {
+        "id": 14,
+        "runOption": "run",
+        "First name": "Suzanne",
+        "Last name": "Rosin",
+        "bibName": "It's Me"
+      },
+      {
+        "id": 15,
+        "runOption": "run",
+        "First name": "Stephen",
+        "Last name": "Gober",
+        "bibName": "Bootlegger"
+      },
+      {
+        "id": 16,
+        "runOption": "run",
+        "First name": "Emmalia",
+        "Last name": "Harrington",
+        "bibName": "NYC Mudders"
+      },
+      {
+        "id": 17,
+        "runOption": "run",
+        "First name": "El",
+        "Last name": "Sybesma",
+        "bibName": "Miss Vera Behavin'"
+      },
+      {
+        "id": 18,
+        "runOption": "run",
+        "First name": "Amy",
+        "Last name": "Bailey",
+        "bibName": "Amy"
+      },
+      {
+        "id": 19,
+        "runOption": "run",
+        "First name": "Matt",
+        "Last name": "Black",
+        "bibName": "TEQUILA MATT"
+      }
+    ];
+    bibs.sort((a, b) => (a['Last name'] > b['Last name']) ? 1 : -1);
+    
+    let runnerListHTML = '';
+    const runnerList = bibs.forEach(element => {
+      console.log(element['runOption']);
+      runnerListHTML += `<li><a href="?id=${element['id']}">${element['Last name']}, ${element['First name']}</a></li>`;
+    });
+    document.querySelector('#runners').innerHTML = runnerListHTML;
+
+    function getUrlParameter(name) {
+      // getUrlParameter('name');
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      var results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+
+    const id = getUrlParameter('id');
+    
+    if (!id){
+      return;
+    }
+
+    let runner = bibs.find(x => x.id == id);
+    console.log(runner);
+
+    document.querySelector(".userNumber").setAttribute('hidden', true);
+    document.querySelector(".bib").removeAttribute('hidden');
+
+    const canvas = document.getElementById("c")
+    const context = canvas.getContext("2d");
+
+    var imageCSTS = new Image();
+    var imagePAB = new Image();
+    var imageRJH = new Image();
+
+
+    scale = 3;
+    canvas.height = 640 * scale;
+    canvas.width = 640 * scale;
+    context.font = 'normal 65px Anton';
+    window.addEventListener('load', function () {
+      
+      const draw = runner => {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        context.fillStyle = '#fbba11';
+        // context.fillStyle = '#ff8037';
+        // context.fillStyle = '#fb473f';
+        // context.fillStyle = '#ffe800';
+        context.fillRect(0, 0, 640 * scale, 480 * scale);
+        context.fillStyle = '#f18a00';
+        context.fillRect(0, 180 * scale, 640 * scale, 480 * scale);
+        context.fillStyle = '#e1251b';
+        context.fillRect(0, 360 * scale, 640 * scale, 480 * scale);
+        context.fillStyle = '#000';
+        context.fillRect(0, 540 * scale, 640 * scale, 480 * scale/3);
+
+        context.textAlign = 'center';
+        context.textBaseline = 'middle';
+        context.fillStyle = '#fff';
+        context.font = `normal ${38 * scale}px Anton`;
+        context.fillText(`Can’t Stop the Serenity 2020 Virtual 5k`, 320 * scale, 60 * scale);
+        context.save();
+        context.textAlign = 'left';
+        context.font = `normal ${52 * scale}px Anton`;
+        context.fillText(`RUNNING OF THE JAYNES`, 40 * scale, 120 * scale);
+        // context.font = `normal ${70 * scale}px Anton`;
+        // context.fillText(`RUNNING`, 30 * scale, 80 * scale);
+        // context.fillText(`OF THE JAYNES`, 30 * scale, 170 * scale);
+        context.restore();
+        context.font = `normal ${200 * scale}px Anton`;
+        context.fillText(`${runner['id']}`, 320 * scale, 350 * scale);
+        context.font = `normal ${30 * scale}px Anton`;
+
+        let tagline = runner.runOption === 'run' ? "“Gotta go to the crappy town where I’m a hero”"
+        : "“When you can’t run…”";
+        context.fillText(tagline, 320 * scale, 500 * scale);
+
+        // images
+        imageRJH.onload = function() {
+          context.drawImage(imageRJH, 430 * scale, 50 * scale, 300*2, 250*2);
+        };
+        imageRJH.src = 'RunningJayneHat.svg';
+
+        imagePAB.onload = function() {
+          context.drawImage(imagePAB, 10 * scale, 566 * scale, 225, 167.5);
+        };
+        imagePAB.src = 'pabrowncoats2016.png';
+
+        imageCSTS.onload = function() {
+          context.drawImage(imageCSTS, 560 * scale, 560 * scale, 225, 212);
+        };
+        imageCSTS.src = 'CSTS-2020-Logo.png';
+        
+        var fontsize = 60 * scale;
+        do {
+            fontsize--;
+            context.font = `normal ${fontsize}px Anton`;
+        } while ( context.measureText( runner.bibName.toUpperCase()).width > canvas.width - 180 * scale );
+        
+        context.fillText(runner.bibName.toUpperCase(), 320 * scale, 601 * scale);
+      }
+      
+      draw(runner);
+      
+      const handleKeyup = event => {
+        draw(event.target.value);
+      };
+      
+      // output.addEventListener('keyup', handleKeyup);
+
+    });
+  })();
+</script>
+</body>
+</html>
