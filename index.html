@@ -90,154 +90,315 @@
   (function() {
 
     const bibs = [
-      {
-        "id": 1,
-        "runOption": "run",
-        "First name": "Helen",
-        "Last name": "Eshleman",
-        "bibName": "Tequila Bandit"
-      },
-      {
-        "id": 2112,
-        "runOption": "run",
-        "First name": "Jim",
-        "Last name": "Eshleman",
-        "bibName": "Slippery Jim"
-      },
-      {
-        "id": 3,
-        "runOption": "run",
-        "First name": "Nathan",
-        "Last name": "Lilly",
-        "bibName": "Nathan E. Lilly"
-      },
-      {
-        "id": 4,
-        "runOption": "run",
-        "First name": "James",
-        "Last name": "Sunga",
-        "bibName": "JW"
-      },
-      {
-        "id": 5,
-        "runOption": "run",
-        "First name": "Marielaina",
-        "Last name": "Forcey",
-        "bibName": "Laina"
-      },
-      {
-        "id": 6,
-        "runOption": "run",
-        "First name": "Regina",
-        "Last name": "Barry",
-        "bibName": "Regina"
-      },
-      {
-        "id": 7,
-        "runOption": "run",
-        "First name": "Tanya",
-        "Last name": "Dapkey",
-        "bibName": "Raffle Mistress"
-      },
-      {
-        "id": 42,
-        "runOption": "run",
-        "First name": "Sophiny",
-        "Last name": "Lilly",
-        "bibName": "YoSophBridge"
-      },
-      {
-        "id": 9,
-        "runOption": "run",
-        "First name": "Geoff",
-        "Last name": "Weyer",
-        "bibName": "Geoff"
-      },
-      {
-        "id": 10,
-        "runOption": "run",
-        "First name": "Leslie",
-        "Last name": "Maynard",
-        "bibName": "NYC Mudders"
-      },
-      {
-        "id": 11,
-        "runOption": "run",
-        "First name": "Richard",
-        "Last name": "Maynard",
-        "bibName": "NYC Mudders"
-      },
-      {
-        "id": 12,
-        "runOption": "run",
-        "First name": "Kevin",
-        "Last name": "Maynard",
-        "bibName": "NYC Mudders"
-      },
-      {
-        "id": 13,
-        "runOption": "run",
-        "First name": "Kristi",
-        "Last name": "Clements",
-        "bibName": "Cap'n Tight Pants"
-      },
-      {
-        "id": 14,
-        "runOption": "run",
-        "First name": "Suzanne",
-        "Last name": "Rosin",
-        "bibName": "It's Me"
-      },
-      {
-        "id": 15,
-        "runOption": "run",
-        "First name": "Stephen",
-        "Last name": "Gober",
-        "bibName": "Bootlegger"
-      },
-      {
-        "id": 16,
-        "runOption": "run",
-        "First name": "Emmalia",
-        "Last name": "Harrington",
-        "bibName": "NYC Mudders"
-      },
-      {
-        "id": 17,
-        "runOption": "run",
-        "First name": "El",
-        "Last name": "Sybesma",
-        "bibName": "Miss Vera Behavin'"
-      },
-      {
-        "id": 18,
-        "runOption": "run",
-        "First name": "Amy",
-        "Last name": "Bailey",
-        "bibName": "Amy"
-      },
-      {
-        "id": 19,
-        "runOption": "run",
-        "First name": "Matt",
-        "Last name": "Black",
-        "bibName": "TEQUILA MATT"
-      },
-      {
-        "id": 20,
-        "runOption": "run",
-        "First name": "Sheila",
-        "Last name": "Iserman",
-        "bibName": "Thorn"
-      },
-      {
-        "id": 21,
-        "runOption": "No run",
-        "First name": "Helen",
-        "Last name": "Eshleman",
-        "bibName": "NYC Mudders (JR)"
-      }
-    ];
+  {
+    "id": 1,
+    "runOption": "run",
+    "First name": "Helen",
+    "Last name": "Eshleman",
+    "bibName": "Tequila Bandit"
+  },
+  {
+    "id": 3,
+    "runOption": "run",
+    "First name": "Nathan",
+    "Last name": "Lilly",
+    "bibName": "Nathan E. Lilly"
+  },
+  {
+    "id": 4,
+    "runOption": "run",
+    "First name": "James",
+    "Last name": "Sunga",
+    "bibName": "JW"
+  },
+  {
+    "id": 5,
+    "runOption": "run",
+    "First name": "Marielaina",
+    "Last name": "Forcey",
+    "bibName": "Laina"
+  },
+  {
+    "id": 6,
+    "runOption": "run",
+    "First name": "Regina",
+    "Last name": "Barry",
+    "bibName": "Regina"
+  },
+  {
+    "id": 7,
+    "runOption": "run",
+    "First name": "Tanya",
+    "Last name": "Dapkey",
+    "bibName": "Raffle Mistress"
+  },
+  {
+    "id": 9,
+    "runOption": "run",
+    "First name": "Geoff",
+    "Last name": "Weyer",
+    "bibName": "Geoff"
+  },
+  {
+    "id": 10,
+    "runOption": "run",
+    "First name": "Leslie",
+    "Last name": "Maynard",
+    "bibName": "NYC Mudders"
+  },
+  {
+    "id": 11,
+    "runOption": "run",
+    "First name": "Richard",
+    "Last name": "Maynard",
+    "bibName": "NYC Mudders"
+  },
+  {
+    "id": 12,
+    "runOption": "run",
+    "First name": "Kevin",
+    "Last name": "Maynard",
+    "bibName": "NYC Mudders"
+  },
+  {
+    "id": 13,
+    "runOption": "run",
+    "First name": "Kristi",
+    "Last name": "Clements",
+    "bibName": "Cap'n Tight Pants"
+  },
+  {
+    "id": 14,
+    "runOption": "run",
+    "First name": "Suzanne",
+    "Last name": "Rosin",
+    "bibName": "It's Me"
+  },
+  {
+    "id": 15,
+    "runOption": "run",
+    "First name": "Stephen",
+    "Last name": "Gober",
+    "bibName": "Bootlegger"
+  },
+  {
+    "id": 16,
+    "runOption": "run",
+    "First name": "Emmalia",
+    "Last name": "Harrington",
+    "bibName": "NYC Mudders"
+  },
+  {
+    "id": 17,
+    "runOption": "run",
+    "First name": "El",
+    "Last name": "Sybesma",
+    "bibName": "Miss Vera Behavin'"
+  },
+  {
+    "id": 18,
+    "runOption": "run",
+    "First name": "Amy",
+    "Last name": "Bailey",
+    "bibName": "Amy"
+  },
+  {
+    "id": 19,
+    "runOption": "run",
+    "First name": "Matt",
+    "Last name": "Black",
+    "bibName": "TEQUILA MATT"
+  },
+  {
+    "id": 20,
+    "runOption": "run",
+    "First name": "Sheila",
+    "Last name": "Iserman",
+    "bibName": "Thorn"
+  },
+  {
+    "id": 21,
+    "runOption": "No run",
+    "First name": "Helen",
+    "Last name": "Eshleman",
+    "bibName": "NYC Mudders (JR)"
+  },
+  {
+    "id": 22,
+    "runOption": "No run",
+    "First name": "Audrey",
+    "Last name": "Hackett",
+    "bibName": "Audrey"
+  },
+  {
+    "id": 23,
+    "runOption": "run",
+    "First name": "Lina",
+    "Last name": "Byland",
+    "bibName": "Lina"
+  },
+  {
+    "id": 24,
+    "runOption": "run",
+    "First name": "Sam",
+    "Last name": "Byland",
+    "bibName": "Sam"
+  },
+  {
+    "id": 25,
+    "runOption": "run",
+    "First name": "Katrielle",
+    "Last name": "Byland",
+    "bibName": "Kat"
+  },
+  {
+    "id": 26,
+    "runOption": "run",
+    "First name": "Robert",
+    "Last name": "Sybesma",
+    "bibName": "Calamity Bob"
+  },
+  {
+    "id": 27,
+    "runOption": "run",
+    "First name": "Brian",
+    "Last name": "Kliesen",
+    "bibName": "Brian Kliesen"
+  },
+  {
+    "id": 28,
+    "runOption": "run",
+    "First name": "Christine",
+    "Last name": "Anderson",
+    "bibName": "Crazy Aunt Chris"
+  },
+  {
+    "id": 29,
+    "runOption": "run",
+    "First name": "Amy",
+    "Last name": "McKinney",
+    "bibName": "Agitha Stabbenslash"
+  },
+  {
+    "id": 30,
+    "runOption": "run",
+    "First name": "Cantelle",
+    "Last name": "Stewart",
+    "bibName": "Marina Kalinin"
+  },
+  {
+    "id": 31,
+    "runOption": "run",
+    "First name": "Thomas",
+    "Last name": "Dennis",
+    "bibName": ""
+  },
+  {
+    "id": 33,
+    "runOption": "run",
+    "First name": "Caroline",
+    "Last name": "Finkes",
+    "bibName": "Big Damn Hero"
+  },
+  {
+    "id": 34,
+    "runOption": "run",
+    "First name": "Lorraine",
+    "Last name": "Charowsky",
+    "bibName": "Shiny Raine"
+  },
+  {
+    "id": 35,
+    "runOption": "run",
+    "First name": "Russell",
+    "Last name": "Glantz",
+    "bibName": "Serenity Valley Extra #23"
+  },
+  {
+    "id": 36,
+    "runOption": "no run",
+    "First name": "Sunny",
+    "Last name": "Glantz",
+    "bibName": "Sunny Birb"
+  },
+  {
+    "id": 37,
+    "runOption": "run",
+    "First name": "Dava",
+    "Last name": "White",
+    "bibName": "Team Joni - Too Soon"
+  },
+  {
+    "id": 38,
+    "runOption": "no run",
+    "First name": "Susanna",
+    "Last name": "Reilly",
+    "bibName": "Running for Sue"
+  },
+  {
+    "id": 40,
+    "runOption": "run",
+    "First name": "Jennifer",
+    "Last name": "Carr",
+    "bibName": "Jen Carr"
+  },
+  {
+    "id": 41,
+    "runOption": "run",
+    "First name": "Chris",
+    "Last name": "Gibney",
+    "bibName": "Gibbs"
+  },
+  {
+    "id": 42,
+    "runOption": "run",
+    "First name": "Sophiny",
+    "Last name": "Lilly",
+    "bibName": "YoSophBridge"
+  },
+  {
+    "id": 43,
+    "runOption": "run",
+    "First name": "Ana",
+    "Last name": "Keveney",
+    "bibName": "NYC Mudders"
+  },
+  {
+    "id": 44,
+    "runOption": "run",
+    "First name": "Paul",
+    "Last name": "Harbord",
+    "bibName": "NYC Mudders"
+  },
+  {
+    "id": 45,
+    "runOption": "run",
+    "First name": "Jeremy",
+    "Last name": "Danley",
+    "bibName": "Captain Tightpants"
+  },
+  {
+    "id": 46,
+    "runOption": "run",
+    "First name": "Rebecca",
+    "Last name": "Clark",
+    "bibName": "NYC Mudders"
+  },
+  {
+    "id": 2020,
+    "runOption": "run",
+    "First name": "Poco",
+    "Last name": "Maynard",
+    "bibName": "NYC Mudders"
+  },
+  {
+    "id": 2112,
+    "runOption": "run",
+    "First name": "Jim",
+    "Last name": "Eshleman",
+    "bibName": "Slippery Jim"
+  }
+];
     bibs.sort((a, b) => (a['Last name'] > b['Last name']) ? 1 : -1);
     
     let runnerListHTML = '';
