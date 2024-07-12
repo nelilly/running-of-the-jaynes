@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <style>
-    html { background-color: #ffffe4; padding: 0; margin: 0; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-font-smoothing: antialiased; font-family: Anton, sans-serif; font-size: 18px; font-weight: 400; }
+    html { background-color: #e9e9de; padding: 0; margin: 0; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-font-smoothing: antialiased; font-family: Anton, sans-serif; font-size: 18px; font-weight: 400; }
     body {
       font-family: Anton, sans-serif;
       margin: 0;
@@ -110,315 +110,211 @@
   (function() {
 
     const bibs = [
-      {
-        "id": 1,
-        "runOption": "run",
-        "First name": "Helen",
-        "Last name": "Eshleman",
-        "bibName": "Tequila Bandit"
-      },
-      {
-        "id": 2,
-        "runOption": "run",
-        "First name": "Regina",
-        "Last name": "Barry",
-        "bibName": "Regina"
-      },
-      {
-        "id": 3,
-        "runOption": "run",
-        "First name": "Geoff",
-        "Last name": "Weyer",
-        "bibName": "Geoff"
-      },
-      {
-        "id": 4,
-        "runOption": "run",
-        "First name": "zan",
-        "Last name": "rosin",
-        "bibName": "It's Me"
-      },
-      {
-        "id": 5,
-        "runOption": "run",
-        "First name": "Steve",
-        "Last name": "Gober",
-        "bibName": "Bootlegger"
-      },
-      {
-        "id": 6,
-        "runOption": "run",
-        "First name": "Sheila",
-        "Last name": "iserman",
-        "bibName": "Sheila"
-      },
-      {
-        "id": 7,
-        "runOption": "run",
-        "First name": "Jacob",
-        "Last name": "Melton",
-        "bibName": "Jacob"
-      },
-      {
-        "id": 8,
-        "runOption": "run",
-        "First name": "Francis",
-        "Last name": "Simmler",
-        "bibName": "ChiefSim"
-      },
-      {
-        "id": 9,
-        "runOption": "run",
-        "First name": "Emily",
-        "Last name": "Crowley",
-        "bibName": "Mrs. Keelhauler"
-      },
-      {
-        "id": 10,
-        "runOption": "run",
-        "First name": "Melissa",
-        "Last name": "Honig",
-        "bibName": "Melissa"
-      },
-      {
-        "id": 11,
-        "runOption": "run",
-        "First name": "Leslie",
-        "Last name": "Maynard",
-        "bibName": "Tall Card Maynard"
-      },
-      {
-        "id": 12,
-        "runOption": "run",
-        "First name": "Rich",
-        "Last name": "Maynard",
-        "bibName": "Rich"
-      },
-      {
-        "id": 13,
-        "runOption": "no run",
-        "First name": "Tanya",
-        "Last name": "Dapkey",
-        "bibName": "Raffle Mistress"
-      },
-      {
-        "id": 14,
-        "runOption": "run",
-        "First name": "Angelique",
-        "Last name": "Seth",
-        "bibName": "Auntie Misbehavin'"
-      },
-      {
-        "id": 15,
-        "runOption": "run",
-        "First name": "Bob",
-        "Last name": "Sybesma",
-        "bibName": "Calamity Jayne"
-      },
-      {
-        "id": 16,
-        "runOption": "run",
-        "First name": "Christine",
-        "Last name": "Roberts",
-        "bibName": "Cricket"
-      },
-      {
-        "id": 17,
-        "runOption": "run",
-        "First name": "El",
-        "Last name": "Sybesma",
-        "bibName": "Ms. Vera Behavin"
-      },
-      {
-        "id": 18,
-        "runOption": "run",
-        "First name": "Lorraine",
-        "Last name": "Charowsky",
-        "bibName": "Shiny Raine"
-      },
-      {
-        "id": 19,
-        "runOption": "run",
-        "First name": "Russell",
-        "Last name": "Glantz",
-        "bibName": "Serenity Valley Extra #42"
-      },
-      {
-        "id": 20,
-        "runOption": "run",
-        "First name": "Carol",
-        "Last name": "Clowry",
-        "bibName": "Banshee"
-      },
-      {
-        "id": 21,
-        "runOption": "run",
-        "First name": "Erin",
-        "Last name": "McCullough",
-        "bibName": "erinm_4600"
-      },
-      {
-        "id": 22,
-        "runOption": "run",
-        "First name": "Erin",
-        "Last name": "Cox",
-        "bibName": "Qkbvoch"
-      },
-      {
-        "id": 23,
-        "runOption": "run",
-        "First name": "Ruth",
-        "Last name": "Kneale",
-        "bibName": "Ruth"
-      },
-      {
-        "id": 24,
-        "runOption": "run",
-        "First name": "Jacqueline",
-        "Last name": "Ortega",
-        "bibName": "Inara Thunder"
-      },
-      {
-        "id": 25,
-        "runOption": "run",
-        "First name": "James",
-        "Last name": "Shydohub",
-        "bibName": "Mir"
-      },
-      {
-        "id": 26,
-        "runOption": "run",
-        "First name": "Amy",
-        "Last name": "Bailey",
-        "bibName": "Amy"
-      },
-      {
-        "id": 27,
-        "runOption": "run",
-        "First name": "Loretta",
-        "Last name": "Painter",
-        "bibName": "Loretta"
-      },
-      {
-        "id": 37,
-        "runOption": "run",
-        "First name": "Krystle",
-        "Last name": "Raspa",
-        "bibName": "K Dizzle"
-      },
-      {
-        "id": 42,
-        "runOption": "run",
-        "First name": "Matt",
-        "Last name": "Black",
-        "bibName": "Tequila Matt"
-      },
-      {
-        "id": 84,
-        "runOption": "run",
-        "First name": "Shirley",
-        "Last name": "Renou",
-        "bibName": "Captain Boopzee"
-      },
-      {
-        "id": 99,
-        "runOption": "run",
-        "First name": "Dori",
-        "Last name": "Lovers",
-        "bibName": "LET'S GO BE BAD GUYS!"
-      },
-      {
-        "id": 333,
-        "runOption": "run",
-        "First name": "Ana Maria",
-        "Last name": "Selvaggio",
-        "bibName": "Capt Nyorissa Kel"
-      },
-      {
-        "id": 666,
-        "runOption": "run",
-        "First name": "Sam",
-        "Last name": "Byland",
-        "bibName": "Elric Stormbring"
-      },
-      {
-        "id": 1031,
-        "runOption": "no run",
-        "First name": "Leslie",
-        "Last name": "Maynard",
-        "bibName": "Harry Dresden - Wizard"
-      },
-      {
-        "id": 1701,
-        "runOption": "run",
-        "First name": "Donna",
-        "Last name": "Rozelle",
-        "bibName": "Dona Snowpunzel Rozelle"
-      },
-      {
-        "id": 1963,
-        "runOption": "run",
-        "First name": "Jen",
-        "Last name": "Steigelman",
-        "bibName": "JENTHAR THE DESTROYER"
-      },
-      {
-        "id": 1984,
-        "runOption": "run",
-        "First name": "Shelby",
-        "Last name": "Smith",
-        "bibName": "Shelby"
-      },
-      {
-        "id": 2020,
-        "runOption": "run",
-        "First name": "Aubri",
-        "Last name": "Stclair",
-        "bibName": "Aubri"
-      },
-      {
-        "id": 2112,
-        "runOption": "run",
-        "First name": "Jim",
-        "Last name": "Eshleman",
-        "bibName": "Slippery Jim"
-      },
-      {
-        "id": 7923,
-        "runOption": "run",
-        "First name": "Susanna",
-        "Last name": "Reilly",
-        "bibName": "Susanna"
-      },
-      {
-        "id": 9461,
-        "runOption": "run",
-        "First name": "Barbara",
-        "Last name": "Dove",
-        "bibName": "Albatross"
-      },
-      {
-        "id": "0364",
-        "runOption": "run",
-        "First name": "Sean",
-        "Last name": "Crowley",
-        "bibName": "Keelhauler"
-      },
-      {
-        "id": "OO13",
-        "runOption": "",
-        "First name": "Jeremy",
-        "Last name": "Ridgeway",
-        "bibName": "Jamie"
-      },
-      {
-        "id": "OO19",
-        "runOption": "run",
-        "First name": "Paula",
-        "Last name": "Mendez",
-        "bibName": "Browncoat Biscochita"
-      }
-    ];
+  {
+    "id": 1,
+    "runOption": "run",
+    "First name": "Helen",
+    "Last name": "Eshleman",
+    "bibName": "Tequila Bandit"
+  },
+  {
+    "id": 2,
+    "runOption": "run",
+    "First name": "sheila",
+    "Last name": "iserman",
+    "bibName": "The Cat Sitter"
+  },
+  {
+    "id": 3,
+    "runOption": "run",
+    "First name": "Bill",
+    "Last name": "Thomas",
+    "bibName": "Dark Shades Bill"
+  },
+  {
+    "id": 4,
+    "runOption": "run",
+    "First name": "Regina",
+    "Last name": "Barry",
+    "bibName": "Regina"
+  },
+  {
+    "id": 5,
+    "runOption": "run",
+    "First name": "Geoff",
+    "Last name": "Weyer",
+    "bibName": "Geoff"
+  },
+  {
+    "id": 6,
+    "runOption": "run",
+    "First name": "Leslie",
+    "Last name": "Maynard",
+    "bibName": "Tall Card Maynard"
+  },
+  {
+    "id": 7,
+    "runOption": "run",
+    "First name": "Lauren",
+    "Last name": "Santora",
+    "bibName": "The Mechanic"
+  },
+  {
+    "id": 8,
+    "runOption": "no run",
+    "First name": "Lina",
+    "Last name": "Byland",
+    "bibName": "Lina"
+  },
+  {
+    "id": 9,
+    "runOption": "run",
+    "First name": "Paula",
+    "Last name": "Handley",
+    "bibName": "Mystik"
+  },
+  {
+    "id": 10,
+    "runOption": "run",
+    "First name": "Melissa",
+    "Last name": "Honig",
+    "bibName": "Melissa"
+  },
+  {
+    "id": 11,
+    "runOption": "run",
+    "First name": "Stephen",
+    "Last name": "Gober",
+    "bibName": "Bootlegger"
+  },
+  {
+    "id": 12,
+    "runOption": "no run",
+    "First name": "Ana",
+    "Last name": "Keveney",
+    "bibName": "Anne O'Keaveny"
+  },
+  {
+    "id": 13,
+    "runOption": "run",
+    "First name": "Rick",
+    "Last name": "Unrein",
+    "bibName": "Captain Harbatkin"
+  },
+  {
+    "id": 14,
+    "runOption": "run",
+    "First name": "Sharon",
+    "Last name": "Byers",
+    "bibName": "Sharon Byers"
+  },
+  {
+    "id": 15,
+    "runOption": "run",
+    "First name": "Ruth",
+    "Last name": "Kneale",
+    "bibName": "Ruth"
+  },
+  {
+    "id": 16,
+    "runOption": "run",
+    "First name": "Kyle",
+    "Last name": "Chelius",
+    "bibName": "Ganglerisson"
+  },
+  {
+    "id": 17,
+    "runOption": "run",
+    "First name": "Theresa",
+    "Last name": "Brundage",
+    "bibName": "Theresa"
+  },
+  {
+    "id": 18,
+    "runOption": "run",
+    "First name": "Kyle",
+    "Last name": "Chelius",
+    "bibName": "Ganglerisson"
+  },
+  {
+    "id": 42,
+    "runOption": "run",
+    "First name": "Matt",
+    "Last name": "Black",
+    "bibName": "Tequila Matt"
+  },
+  {
+    "id": 99,
+    "runOption": "run",
+    "First name": "Dori",
+    "Last name": "Lovers",
+    "bibName": "Let's go be bad guys!"
+  },
+  {
+    "id": 333,
+    "runOption": "run",
+    "First name": "Ana Maria",
+    "Last name": "Selvaggio",
+    "bibName": "Capt. Nyorissa Kel"
+  },
+  {
+    "id": 666,
+    "runOption": "no run",
+    "First name": "Sam",
+    "Last name": "Byland",
+    "bibName": "Elric Stormbring"
+  },
+  {
+    "id": 723,
+    "runOption": "run",
+    "First name": "Susanna",
+    "Last name": "Reilly",
+    "bibName": "Susanna"
+  },
+  {
+    "id": 1701,
+    "runOption": "run",
+    "First name": "Laina",
+    "Last name": "Forcey",
+    "bibName": "Laina"
+  },
+  {
+    "id": 2112,
+    "runOption": "run",
+    "First name": "Jim",
+    "Last name": "Eshleman",
+    "bibName": "Slippery Jim"
+  },
+  {
+    "id": 4630,
+    "runOption": "run",
+    "First name": "Lance",
+    "Last name": "Crowley",
+    "bibName": "Mrs. Keelhauler"
+  },
+  {
+    "id": 7647,
+    "runOption": "run",
+    "First name": "Roon",
+    "Last name": "Marchsnt",
+    "bibName": "Roon Marchant"
+  },
+  {
+    "id": "0364",
+    "runOption": "run",
+    "First name": "Lance",
+    "Last name": "Crowley",
+    "bibName": "Keelhauler"
+  },
+  {
+    "id": "04",
+    "runOption": "run",
+    "First name": "zan",
+    "Last name": "rosin",
+    "bibName": "Zanchez"
+  }
+];
+
     bibs.sort((a, b) => (a['Last name'] > b['Last name']) ? 1 : -1);
     
     let runnerListHTML = '';
@@ -486,7 +382,7 @@
           context.textBaseline = 'middle';
           context.fillStyle = '#fff';
           context.font = `normal ${38 * scale}px Anton`;
-          context.fillText(`Can’t Stop the Serenity 2023 Virtual 5k`, 320 * scale, 60 * scale);
+          context.fillText(`Can’t Stop the Serenity 2024 Virtual 5k`, 320 * scale, 60 * scale);
           context.save();
           context.textAlign = 'left';
           context.font = `normal ${52 * scale}px Anton`;
